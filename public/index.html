@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Cinnamon Tree — A tranquil vegetarian restaurant in Devprayag serving seasonal, local flavors with a global twist." />
+
+    <title>Cinnamon Tree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#FFFFF0',
+                        forest: '#328E6E',
+                        coral: '#FF7F50',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-bg {
+            animation: fadeSlide 6s infinite;
+        }
+
+        @keyframes fadeSlide {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            16.66% {
+                opacity: 1;
+            }
+
+            33.32% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            66.66% {
+                opacity: 0;
+            }
+
+            83.32% {
+                opacity: 1;
+            }
+        }
+
+        :root {
+            --green-100: #d1fae5;
+            --green-200: #a7f3d0;
+            --green-300: #6ee7b7;
+            --green-400: #34d399;
+            --green-500: #10b981;
+            --green-600: #059669;
+            --green-700: #047857;
+            --green-800: #065f46;
+            --green-900: #064e3b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #themeToggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-[#FFFFF0]">
+    <!-- Main wrapper -->
+    <div class="border-2 border-[#064e3b] m-3 rounded">
+        <!-- Hero Section -->
+        <section id="home" class="relative border border-[#064e3b] m-2  rounded overflow-hidden ">
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            <!-- for content visibility -->
+
+            <div class="absolute inset-0 flex items-center justify-center px-4 sm:px-8 text-center z-20">
+                <div class=" bg-opacity-40 p-6 sm:p-10 rounded-2xl shadow-lg max-w-xl w-full">
+
+                    <h3
+                        class="font-['Playfair_Display'] text-3xl sm:text-3xl md:text-3xl font-bold text-[#d1fae5] leading-tight mb-4 tracking-wide">
+                        🌿Unpack!!Unwind!!🌿
+                    </h3>
+
+                    <p class="text-lg sm:text-xl text-[#d1fae5] font-medium leading-relaxed">
+                        and let us take <br class="block sm:hidden" /> care of the rest
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="relative w-full h-[80vh] sm:h-[60vh] xs:h-[100vh] overflow-hidden group" id="carousel">
+                <!-- Slider -->
+                <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
+                    <img loading="lazy" src="images/image.jpg" class="w-full h-full object-cover flex-shrink-0" />
+                    <img loading="lazy" src="images/img2.jpg" class="w-full h-full object-cover flex-shrink-0" />
+                    <img loading="lazy" src="images/img.jpg" class="w-full h-full object-cover flex-shrink-0" />
+                </div>
+
+                <!-- Arrows -->
+                <button id="prev"
+                    class="absolute top-1/2 left-4 -translate-y-1/2 text-white/40 text-3xl z-30 opacity-0 group-hover:opacity-100 transition">❮</button>
+                <button id="next"
+                    class="absolute top-1/2 right-4 -translate-y-1/2 text-white/40 text-3xl z-30 opacity-0group-hover:opacity-100 transition">❯</button>
+
+                <!-- Dots -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                    <span class="dot w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-200 cursor-pointer"
+                        data-index="0"></span>
+                    <span class="dot w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-200 cursor-pointer"
+                        data-index="1"></span>
+                    <span class="dot w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-200 cursor-pointer"
+                        data-index="2"></span>
+                </div>
+            </div>
+
+            <!-- Navbar -->
+            <nav class="fixed top-10 left-1/2 transform -translate-x-1/2 z-50 bg-[#FFFFF0] bg-opacity-90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-md w-[80%] max-w-3xl
+                flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center ">
+                    <img src="images/Tree icon.png" alt="Logo" class="h-8 w-8" />
+                    <span class="text-lg sm:text-xl md:text-2xl font-bold text-[#328E6E]">Cinnamon Tree</span>
+                </div>
+
+                <!-- Desktop Links -->
+                <ul class="hidden md:flex space-x-6 font-semibold text-[#328E6E]">
+                    <li><a href="#about" class="hover:text-[#FF7F50]">About Us</a></li>
+                    <li><a href="#menu" class="hover:text-[#FF7F50]">Menu</a></li>
+                    <li><a href="#reservation" class="hover:text-[#FF7F50]">Reservation</a></li>
+                    <li><a href="#contact" class="hover:text-[#FF7F50]">Contact Us</a></li>
+                </ul>
+
+                <!-- Hamburger Icon -->
+                <button id="menu-toggle" class="md:hidden text-3xl text-[#328E6E] focus:outline-none">
+                    &#9776;
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="md:hidden hidden absolute top-20 left-1/2 transform -translate-x-1/2 w-[90%] max-w-5xl bg-white rounded-lg shadow z-40 text-center">
+                <ul class="flex flex-col divide-y font-semibold text-[#328E6E]">
+                    <li><a href="#home" class="block py-3">Home</a></li>
+                    <li><a href="#about" class="block py-3">About Us</a></li>
+                    <li><a href="#menu" class="block py-3">Menu</a></li>
+                    <li><a href="#reservation" class="block py-3">Reservation</a></li>
+                    <li><a href="#contact" class="block py-3">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="border border-[#064e3b] m-2  rounded p-6  bg-[var(--green-100)]">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#328E6E] mb-5 text-center tracking-wide">
+                About Us</h2>
+            <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
+            <p class="text-justify leading-relaxed text-lg font-serif text-gray-700">Nestled in the serene hills of
+                Devprayag, where the sacred rivers Alaknanda and
+                Bhagirathi meet to form the Ganges, Cinnamon Tree offers a tranquil culinary escape infused with natural
+                beauty
+                and rich tradition. Our restaurant blends the essence of local flavors with global inspirations, serving
+                thoughtfully curated vegetarian dishes made from fresh, seasonal ingredients. Whether you're a traveler
+                seeking
+                warmth or a local looking for comfort, Cinnamon Tree invites you to unwind, savor, and celebrate food in
+                a space
+                where nature and taste harmoniously coexist.</p>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="border border-[#064e3b] m-2  rounded p-6 bg-[var(--green-100)]">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#328E6E] mb-5 text-center tracking-wide">
+                Menu</h2>
+            <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
+            <div class="overflow-x-auto whitespace-nowrap space-x-4 pb-4 flex">
+                <img loading="lazy" class="inline-block h-40 rounded"
+                    src="https://source.unsplash.com/200x200/?food,dish1" />
+                <img loading="lazy" class="inline-block h-40 rounded"
+                    src="https://source.unsplash.com/200x200/?food,dish2" />
+                <img loading="lazy" class="inline-block h-40 rounded"
+                    src="https://source.unsplash.com/200x200/?food,dish3" />
+                <img loading="lazy" class="inline-block h-40 rounded"
+                    src="https://source.unsplash.com/200x200/?food,dish4" />
+                <img loading="lazy" class="inline-block h-40 rounded"
+                    src="https://source.unsplash.com/200x200/?food,dish5" />
+                <img loading="lazy" class="inline-block h-40 rounded"
+                    src="https://source.unsplash.com/200x200/?food,dish6" />
+            </div>
+            <a href="https://drive.google.com" target="_blank"
+                class="inline-block mt-4 bg-[#328E6E] text-white px-4 py-2 rounded-full hover:bg-[#256d54] transition">
+                View Full Menu
+            </a>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation" class="border border-[#064e3b] m-2 rounded p-6 bg-[var(--green-100)]">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#328E6E] mb-5 text-center tracking-wide">
+                Reservation
+            </h2>
+            <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
+            <div class="bg-white border border-[#064e3b] rounded p-4 max-w-xl mx-auto">
+                <form class="grid gap-4">
+                    <input class="border border-[#064e3b] p-2 rounded w-full" type="text" placeholder="Full Name"
+                        required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full" type="tel" placeholder="Phone Number"
+                        required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full text-gray-500" type="date" required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full text-gray-500" type="time" required />
+                    <textarea class="border border-[#064e3b] p-2 rounded w-full resize-none"
+                        placeholder="Special Requests"></textarea>
+                    <button type="submit"
+                        class="w-full bg-[#328E6E] text-white py-2 rounded-full hover:bg-[#256d54] transition">
+                        Send
+                    </button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- Contact Us Section -->
+        <div id="contact" class="border border-[#064e3b] m-2  rounded bg-[var(--green-100)] py-12 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#328E6E] mb-5 text-center tracking-wide">
+                    Contact Us
+                </h2>
+                <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
+
+                <!-- Card Container -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+
+                    <!-- Contact Info Card -->
+                    <div
+                        class="bg-white rounded-2xl border border-[#d9e4e6] p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-[#328E6E] mb-2">Get in Touch</h3>
+                            <div class="w-10 h-1 bg-[#328E6E] rounded-full"></div>
+                        </div>
+                        <ul class="space-y-3 text-gray-700 text-base">
+                            <li><strong>📞Phone:</strong> <br>+91 74510 96881</li>
+                            <li><strong>✉️Email:</strong><br> cinnamontreehotels@gmail.com</li>
+                            <li><strong>📸Connect: </strong><br><a href="https://www.instagram.com/hotelcinnamontree/"
+                                    target="_blank">@hotelcinnamontree</a></li>
+                            <li><strong>👤Owner:</strong> <br>Mr. Prashant Lakhera</li>
+                        </ul>
+                    </div>
+
+                    <!-- Find Us Card -->
+                    <a href="https://www.google.com/maps?rlz=1C1ONGR_enIN1076IN1076&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg5MgYIAhBFGDsyDggDEEUYJxg7GIAEGIoFMg0IBBAAGIMBGLEDGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg90gEINDg3MmowajeoAgCwAgA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KSlUZU8ACQk5MV1iaQ_ULx3Q&daddr=4HHV%2BRP2,+Devprayag,+Raj+Sera,+Uttarakhand+249192"
+                        target="_blank"
+                        class="bg-white rounded-2xl border border-[#d9e4e6] p-6 shadow-md hover:shadow-lg hover:bg-[#e6f4ef] transition duration-300">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-[#328E6E] mb-2">Get Direction</h3>
+                            <div class="w-10 h-1 bg-[#328E6E] rounded-full"></div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            📍4HHV+RP2, <br>Devprayag<br>
+                            Raj Sera, Uttarakhand 249192
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer
+            class="border border-[#064e3b] m-2 bg-[var(--green-100)]  text-[#02594d] text-sm py-2 px-4 rounded-lg shadow-inner border border-[#93bdb2] flex flex-col sm:flex-row justify-between items-center gap-2 mx-2 sm:mx-20">
+            <p class="text-center">&copy; 2025 <span class="font-semibold">Cinnamon Tree</span>. All rights reserved.
+            </p>
+            <a href="#home" class="text-[#02594d] hover:underline font-medium transition duration-200">⬆️ Back to
+                Top</a>
+        </footer>
+
+    </div>
+
+    <script>
+
+        //image slider function
+        const slider = document.getElementById('slider');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slider.children.length;
+        let currentIndex = 0;
+        let autoplay;
+
+        function showSlide(index) {
+            currentIndex = (index + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        function updateDots() {
+            dots.forEach(dot => dot.classList.remove('opacity-100'));
+            dots[currentIndex].classList.add('opacity-100');
+        }
+
+        // Arrows
+        document.getElementById('prev').addEventListener('click', () => showSlide(currentIndex - 1));
+        document.getElementById('next').addEventListener('click', () => showSlide(currentIndex + 1));
+
+        // Dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                showSlide(parseInt(e.target.dataset.index));
+            });
+        });
+
+        // Autoplay
+        function startAutoplay() {
+            autoplay = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 3000);
+        }
+        function stopAutoplay() {
+            clearInterval(autoplay);
+        }
+        startAutoplay();
+
+        // Pause on hover
+        const carousel = document.getElementById('carousel');
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+
+        // Swipe gestures
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                showSlide(currentIndex + 1);
+            } else if (touchEndX > touchStartX + 50) {
+                showSlide(currentIndex - 1);
+            }
+        }
+
+        //hamburger dropdown
+        const toggleBtn = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('mobile-menu');
+
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.add('hidden');
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+                navLinks.classList.add('hidden');
+            }
+        });
+
+        //move to top from bottom
+        const topLink = document.querySelector('a[href="#home"]');
+        topLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        //form submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Reservation sent successfully!');
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>
