@@ -80,12 +80,12 @@
             </div>
 
             <!-- Navbar -->
-            <nav class="fixed top-10 left-1/2 transform -translate-x-1/2 z-50 bg-[#FFFFF0] bg-opacity-90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-md w-[80%] max-w-3xl
-                flex justify-between items-center">
+            <nav class="fixed top-10 left-1/2 transform -translate-x-1/2 z-50 bg-[#FFFFF0] bg-opacity-90 backdrop-blur-md px-10 py-4 rounded-2xl shadow-md w-[80%] max-w-3xl
+                flex justify-between items-center gap-2 sm:gap-4">
                 <!-- Logo -->
                 <div class="flex items-center ">
-                    <img src="images/Tree icon.png" alt="Logo" class="h-8 w-8" />
-                    <span class="text-lg sm:text-xl md:text-2xl font-bold text-[#328E6E]">Cinnamon Tree</span>
+                    <img src="images/Tree icon.png" alt="Logo" class="h-10 w-10" />
+                    <span class="text-3xl sm:text-3xl md:text-3xl font-bold text-[#328E6E]">Cinnamon Tree</span>
                 </div>
 
                 <!-- Desktop Links -->
@@ -100,19 +100,19 @@
                 <button id="menu-toggle" class="md:hidden text-3xl text-[#328E6E] focus:outline-none">
                     &#9776;
                 </button>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu"
+                    class="md:hidden hidden absolute top-20 right-4  w-[50%]  bg-white rounded-lg shadow z-40 text-center">
+                    <ul class="flex flex-col divide-y font-semibold text-[#328E6E]">
+                        <li><a href="#home" class="block py-3">Home</a></li>
+                        <li><a href="#about" class="block py-3">About Us</a></li>
+                        <li><a href="#menu" class="block py-3">Menu</a></li>
+                        <li><a href="#reservation" class="block py-3">Reservation</a></li>
+                        <li><a href="#contact" class="block py-3">Contact Us</a></li>
+                    </ul>
+                </div>
             </nav>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-                class="md:hidden hidden absolute top-20 left-1/2 transform -translate-x-1/2 w-[90%] max-w-5xl bg-white rounded-lg shadow z-40 text-center">
-                <ul class="flex flex-col divide-y font-semibold text-[#328E6E]">
-                    <li><a href="#home" class="block py-3">Home</a></li>
-                    <li><a href="#about" class="block py-3">About Us</a></li>
-                    <li><a href="#menu" class="block py-3">Menu</a></li>
-                    <li><a href="#reservation" class="block py-3">Reservation</a></li>
-                    <li><a href="#contact" class="block py-3">Contact Us</a></li>
-                </ul>
-            </div>
 
 
 
