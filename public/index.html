@@ -33,6 +33,20 @@
         body {
             font-family: 'Lora', serif;
         }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -152,6 +166,25 @@
                 warmth or a local looking for comfort, Cinnamon Tree invites you to unwind, savor, and celebrate food in
                 a space
                 where nature and taste harmoniously coexist.</p>
+            <div class="overflow-hidden py-6">
+                <div class="flex w-max animate-scroll gap-3">
+                    <img src="images/image4.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image2.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image3.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image1.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image5.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image6.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+
+                    <img src="images/image4.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image2.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image3.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image1.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image5.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image6.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+
+                </div>
+            </div>
+
         </section>
 
         <!-- Menu Section -->
@@ -159,24 +192,14 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-[#328E6E] mb-5 text-center tracking-wide">
                 Menu</h2>
             <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
-            <div class="overflow-x-auto whitespace-nowrap space-x-4 pb-4 flex">
-                <img loading="lazy" class="inline-block h-40 rounded"
-                    src="https://source.unsplash.com/200x200/?food,dish1" />
-                <img loading="lazy" class="inline-block h-40 rounded"
-                    src="https://source.unsplash.com/200x200/?food,dish2" />
-                <img loading="lazy" class="inline-block h-40 rounded"
-                    src="https://source.unsplash.com/200x200/?food,dish3" />
-                <img loading="lazy" class="inline-block h-40 rounded"
-                    src="https://source.unsplash.com/200x200/?food,dish4" />
-                <img loading="lazy" class="inline-block h-40 rounded"
-                    src="https://source.unsplash.com/200x200/?food,dish5" />
-                <img loading="lazy" class="inline-block h-40 rounded"
-                    src="https://source.unsplash.com/200x200/?food,dish6" />
+            <div class="overflow-hidden py-6">
+                <img src="images/image4.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
+                <img src="images/image2.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
+                <img src="images/image3.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
+                <img src="images/image1.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
+                <img src="images/image5.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
             </div>
-            <a href="https://drive.google.com" target="_blank"
-                class="inline-block mt-4 bg-[#328E6E] text-white px-4 py-2 rounded-full hover:bg-[#256d54] transition">
-                View Full Menu
-            </a>
+
         </section>
 
         <!-- Reservation Section -->
