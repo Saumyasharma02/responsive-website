@@ -86,6 +86,25 @@ document.addEventListener("click", (e) => {
   }
 });
 
+function toggleAccordion(category) {
+  const panel = document.getElementById('panel-' + category);
+  const icon = document.getElementById('icon-' + category);
+  const isHidden = panel.classList.contains('hidden');
+
+  // Hide all other panels
+  document.querySelectorAll('[id^="panel-"]').forEach(p => p.classList.add('hidden'));
+  document.querySelectorAll('[id^="icon-"]').forEach(i => i.textContent = '+');
+
+  // Toggle current
+  if (isHidden) {
+    panel.classList.remove('hidden');
+    icon.textContent = '–';
+  } else {
+    panel.classList.add('hidden');
+    icon.textContent = '+';
+  }
+}
+
 //move to top from bottom
 const topLink = document.querySelector('a[href="#home"]');
 topLink.addEventListener("click", function (e) {

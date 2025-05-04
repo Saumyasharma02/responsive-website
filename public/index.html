@@ -45,7 +45,7 @@
         }
 
         .animate-scroll {
-            animation: scroll 30s linear infinite;
+            animation: scroll 15s linear infinite;
         }
     </style>
     <script>
@@ -166,20 +166,20 @@
                 warmth or a local looking for comfort, Cinnamon Tree invites you to unwind, savor, and celebrate food in
                 a space
                 where nature and taste harmoniously coexist.</p>
-            <div class="overflow-hidden py-6">
-                <div class="flex w-max animate-scroll gap-3">
+            <div class="overflow-hidden py-5">
+                <div class="flex w-max animate-scroll gap-2">
                     <img src="images/image4.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image2.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image3.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
-                    <img src="images/image1.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image5.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image1.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image6.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
 
                     <img src="images/image4.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image2.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image3.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
-                    <img src="images/image1.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image5.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
+                    <img src="images/image1.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
                     <img src="images/image6.jpg" alt="Ambience" class="h-58 w-72 object-cover rounded-xl shadow-lg" />
 
                 </div>
@@ -192,13 +192,318 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-[#328E6E] mb-5 text-center tracking-wide">
                 Menu</h2>
             <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
-            <div class="overflow-hidden py-6">
-                <img src="images/image4.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
-                <img src="images/image2.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
-                <img src="images/image3.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
-                <img src="images/image1.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
-                <img src="images/image5.jpg" alt="Ambience" class="h-52 w-72 object-cover shadow-lg" />
+            <div class="max-w-2xl mx-auto space-y-4">
+
+                <!-- Accordion Item Template -->
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('beverages')"
+                        class="w-full flex justify-between items-center p-5 text-left text-xl font-semibold hover:bg-[#d9e5db]">
+                        ☕ Hot Beverages
+                        <span id="icon-beverages" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-beverages"
+                        class="hidden px-6 pb-5 text-base space-y-2 text-gray-800 transition-all duration-300">
+                        <p>Masala Chai</p>
+                        <p>Green Tea</p>
+                        <p>Lemon Tea</p>
+                        <p>Lemon Ginger Tea</p>
+                        <p>Classic Coffee</p>
+                        <p>Espresso</p>
+                        <p>Hot Milk</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('cold')"
+                        class="w-full flex justify-between items-center p-5 text-left text-xl font-semibold hover:bg-[#d9e5db]">
+                        🧊 Cold Beverages
+                        <span id="icon-cold" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-cold"
+                        class="hidden px-6 pb-5 text-base space-y-2 text-gray-800 transition-all duration-300">
+                        <p>Cold Coffee</p>
+                        <p>Lemon Soda</p>
+                        <p>Virgin Mojito</p>
+                        <p>Blue Lagoon</p>
+                        <p>Sweet Lassi</p>
+                        <p>Salt Lassi</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('shakes')"
+                        class="w-full flex justify-between items-center p-5 text-left text-xl font-semibold hover:bg-[#d9e5db]">
+                        🥤 Shakes
+                        <span id="icon-shakes" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-shakes"
+                        class="hidden px-6 pb-5 text-base space-y-2 text-gray-800 transition-all duration-300">
+                        <p>Banana Shake</p>
+                        <p>Oreo Shake</p>
+                        <p>Kit Kat Shake</p>
+                        <p>Mango Shake</p>
+                        <p>Strawberry Shake</p>
+                        <p>Blue Berry Shake</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('fritters')"
+                        class="w-full flex justify-between items-center p-5 text-left text-xl font-semibold hover:bg-[#d9e5db]">
+                        🍽️ Fritters
+                        <span id="icon-fritters" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-fritters"
+                        class="hidden px-6 pb-5 text-base space-y-2 text-gray-800 transition-all duration-300">
+                        <p>Aloo Pyaz Pakora</p>
+                        <p>Gobi Pakora</p>
+                        <p>Mix Veg Pakora</p>
+                        <p>Paneer Pakora</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('continental')"
+                        class="w-full flex justify-between items-center p-5 text-left text-xl font-semibold hover:bg-[#d9e5db]">
+                        🍝 Continental Delights
+                        <span id="icon-continental" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-continental"
+                        class="hidden px-6 pb-5 text-base space-y-2 text-gray-800 transition-all duration-300">
+                        <p>Red Sauce Pasta</p>
+                        <p>White Sauce Pasta</p>
+                        <p>Margarita Pizza</p>
+                        <p>Tandoori Paneer Pizza</p>
+                        <p>Burger</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+
+                    <button onclick="toggleAccordion('asian')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🍜 Asian Delights
+                        <span id="icon-asian" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-asian" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Veg Hakka Noodles</p>
+                        <p>Veg Chowmein</p>
+                        <p>Honey Chilli Potato</p>
+                        <p>Chilli Paneer</p>
+                        <p>Chilli Mushroom</p>
+                        <p>Chilli Chaap</p>
+                        <p>Chilli Chicken</p>
+                        <p>French Fries</p>
+                        <p>Peri Peri Fries</p>
+                        <p>Veg Kathi Roll</p>
+                        <p>Paneer Kathi Roll</p>
+                        <p>Egg Kathi Roll</p>
+                        <p>Chicken Kathi Roll</p>
+                        <p>Veg Manchurian</p>
+                        <p>Gravy Manchurian</p>
+                        <p>Schezwan Rice</p>
+                        <p>Egg Fried Rice</p>
+                        <p>Veg Fried Rice</p>
+                    </div>
+                </div>
+
+                <!-- Breakfast -->
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+
+                    <button onclick="toggleAccordion('breakfast')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🍳 Breakfast
+                        <span id="icon-breakfast" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-breakfast" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Plain Paratha</p>
+                        <p>Aloo Paratha</p>
+                        <p>Aloo Pyaz Paratha</p>
+                        <p>Paneer Paratha</p>
+                        <p>Mix Veg Paratha</p>
+                        <p>Egg Paratha</p>
+                        <p>Chole Bhature</p>
+                        <p>Chole Kulche</p>
+                        <p>Puri Bhaji</p>
+                        <p>Boiled Eggs</p>
+                        <p>Plain Omelette</p>
+                        <p>Masala Omelette</p>
+                        <p>Bread Jam</p>
+                        <p>Bread Peanut Butter</p>
+                        <p>Poha</p>
+                        <p>Bun Butter</p>
+                        <p>Egg Bhurji</p>
+                        <p>Plain Maggie</p>
+                        <p>Veg Maggie</p>
+                        <p>Cheese Maggie</p>
+                        <p>Bread Omelette</p>
+                    </div>
+                </div>
+
+                <!-- Sandwiches -->
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+
+                    <button onclick="toggleAccordion('sandwiches')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🥪 Sandwiches
+                        <span id="icon-sandwiches" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-sandwiches" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Veg Club Sandwich</p>
+                        <p>Veg Club Grilled Sandwich</p>
+                        <p>Plain Veg Sandwich</p>
+                        <p>Cheese Sandwich</p>
+                        <p>Coleslaw Sandwich</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+
+                    <button onclick="toggleAccordion('sandwiches')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🥪 Sandwiches
+                        <span id="icon-sandwiches" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-sandwiches" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Veg Club Sandwich</p>
+                        <p>Veg Club Grilled Sandwich</p>
+                        <p>Plain Veg Sandwich</p>
+                        <p>Cheese Sandwich</p>
+                        <p>Coleslaw Sandwich</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('momos')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🥟 Momo's
+                        <span id="icon-momos" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-momos" class="hidden px-6 pb-4 text-base space-y-2">
+
+                        <p>Steamed Momo</p>
+                        <p>Veg Fried Momo</p>
+                        <p>Afghani Momo</p>
+                        <p>Achari Momo</p>
+                        <p>Chilli Veg Momo</p>
+                        <p>Paneer Momo</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+
+                    <button onclick="toggleAccordion('sd')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🔥 Smoky Delights
+                        <span id="icon-sd" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-sd" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Paneer Tikka</p>
+                        <p>Mushroom Tikka</p>
+                        <p>Tandoori Chaap</p>
+                        <p>Tangri Kebab</p>
+                        <p>Tandoori Chicken</p>
+                        <p>Chicken Lollipop</p>
+                        <p>Mastani Chicken Kebab</p>
+                        <p>Chicken Seekh Kebab</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+
+                    <button onclick="toggleAccordion('salad')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🥗 Salad/Raita
+                        <span id="icon-salad" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-salad" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Plain Salad</p>
+                        <p>Green Salad</p>
+                        <p>Onion Salad</p>
+                        <p>Peanut Chaat</p>
+                        <p>Papad</p>
+                        <p>Masala Papad</p>
+                        <p>Mix Veg Raita</p>
+                        <p>Boondi Raita</p>
+                        <p>Plain Curd</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('breads')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🫓 Breads
+                        <span id="icon-breads" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-breads" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Tawa Roti</p>
+                        <p>Butter Roti</p>
+                        <p>Tandoori Roti</p>
+                        <p>Plain Naan</p>
+                        <p>Butter Naan</p>
+                        <p>Garlic Naan</p>
+                        <p>Stuffed Naan</p>
+                        <p>Laccha Paratha</p>
+                        <p>Kulcha</p>
+                        <p>Raghi/Koda Roti</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('vegmain')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🥘 Veg Main Course
+                        <span id="icon-vegmain" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-vegmain" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Kadhai Paneer</p>
+                        <p>Shahi Paneer</p>
+                        <p>Palak Paneer</p>
+                        <p>Paneer Butter Masala</p>
+                        <p>Paneer Bhurji</p>
+                        <p>Paneer Do Pyaza</p>
+                        <p>Paneer Lababdar</p>
+                        <p>Matar Paneer</p>
+                        <p>Matar Mushroom</p>
+                        <p>Palak Mushroom</p>
+                        <p>Aloo Jeera</p>
+                        <p>Aloo Jakhiya</p>
+                        <p>Aloo Matar</p>
+                        <p>Aloo Palak</p>
+                        <p>Gobi Masala</p>
+                        <p>Mix Veg</p>
+                        <p>Palak Corn</p>
+                        <p>Bhindi Masala</p>
+                        <p>Dal Tadka</p>
+                        <p>Dal Fry</p>
+                        <p>Dal Makhani</p>
+                        <p>Chana Masala</p>
+                        <p>Rajma Masala</p>
+                        <p>Soya Chap Masala</p>
+                        <p>Pindi Chole</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md border border-[#93bdb2] rounded-xl overflow-hidden transition hover:shadow-xl">
+                    <button onclick="toggleAccordion('rice')"
+                        class="w-full flex justify-between items-center p-4 text-left text-xl font-semibold">
+                        🍚 Rice
+                        <span id="icon-rice" class="text-2xl">+</span>
+                    </button>
+                    <div id="panel-rice" class="hidden px-6 pb-4 text-base space-y-2">
+                        <p>Steam Rice</p>
+                        <p>Jeera Rice</p>
+                        <p>Veg Pulao</p>
+                        <p>Matar Pulao</p>
+                    </div>
+                </div>
+
+
             </div>
+
 
         </section>
 
@@ -209,10 +514,12 @@
             </h2>
             <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
             <div class="bg-white border border-[#064e3b] rounded p-4 max-w-xl mx-auto">
-                <form class="grid gap-4">
+                <form id="contact-form" class="grid gap-4">
                     <input class="border border-[#064e3b] p-2 rounded w-full" type="text" placeholder="Full Name"
                         required />
                     <input class="border border-[#064e3b] p-2 rounded w-full" type="tel" placeholder="Phone Number"
+                        required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full" type="email" placeholder="Email"
                         required />
                     <input class="border border-[#064e3b] p-2 rounded w-full text-gray-500" type="date"
                         placeholder="dd-mm-yyyy" required />
@@ -285,6 +592,21 @@
         </footer>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("ox7ZJApYFS0IbgAPi"); 
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_1306", "template_1306", this)
+                .then(function () {
+                    alert("Email sent successfully!");
+                }, function (error) {
+                    alert("Failed to send email. Error: " + JSON.stringify(error));
+                });
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
