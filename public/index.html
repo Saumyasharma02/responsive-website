@@ -553,22 +553,21 @@
             <div class="w-90 h-1 bg-[#328E6E] rounded-full"></div><br>
             <div class="bg-white border border-[#064e3b] rounded p-4 max-w-xl mx-auto">
                 <form id="contact-form" class="grid gap-4">
-                    <input class="border border-[#064e3b] p-2 rounded w-full" type="text" placeholder="Full Name"
-                        required />
-                    <input class="border border-[#064e3b] p-2 rounded w-full" type="tel" placeholder="Phone Number"
-                        required />
-                    <input class="border border-[#064e3b] p-2 rounded w-full" type="email" placeholder="Email"
-                        required />
-                    <input class="border border-[#064e3b] p-2 rounded w-full text-gray-500" type="date"
-                        placeholder="dd-mm-yyyy" required />
-
-                    <textarea class="border border-[#064e3b] p-2 rounded w-full resize-none"
+                    <input class="border border-[#064e3b] p-2 rounded w-full" id="name" name="name" type="text"
+                        placeholder="Full Name" required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full" id="number" name="number" type="tel"
+                        placeholder="Phone Number" required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full" id="email" name="email" type="email"
+                        placeholder="Email" required />
+                    <input class="border border-[#064e3b] p-2 rounded w-full text-gray-500" type="date" id="date"
+                        name="date" placeholder="dd-mm-yyyy" required />
+                    <textarea class="border border-[#064e3b] p-2 rounded w-full resize-none" id="message" name="message"
                         placeholder="Special Requests"></textarea>
                     <button type="submit"
                         class="w-full bg-[#328E6E] text-white py-2 rounded-full hover:bg-[#256d54] transition">
                         Send
                     </button>
-                </form>
+                    </form>
             </div>
         </section>
 
@@ -595,7 +594,9 @@
                             <li><strong>📞Phone:</strong> <br>+91 74510 96881</li>
                             <li><strong>✉️Email:</strong><br> cinnamontreehotels@gmail.com</li>
                             <li><strong>📸Connect: </strong><br><a href="https://www.instagram.com/hotelcinnamontree/"
-                                    target="_blank"><p style="text-decoration: underline;">@hotelcinnamontree</p></a></li>
+                                    target="_blank">
+                                    <p style="text-decoration: underline;">@hotelcinnamontree</p>
+                                </a></li>
                             <li><strong>👤Owner:</strong> <br>Mr. Prashant Lakhera</li>
                         </ul>
                     </div>
@@ -622,7 +623,8 @@
         <!-- Footer -->
         <footer
             class="border border-[#064e3b] m-2 bg-[var(--green-100)]  text-[#02594d] text-sm py-2 px-4 rounded-lg shadow-inner border border-[#93bdb2] flex flex-col sm:flex-row justify-between items-center gap-2 mx-2 sm:mx-20">
-            <p class="text-center">&copy; 2025 <span class="font-semibold">Cinnamon Tree</span>. All rights reserved.
+            <p class="text-center">&copy; 2025 <span class="font-semibold">Cinnamon Tree Hotel</span>. All rights
+                reserved.
             </p>
             <a href="#top" class="text-[#02594d] hover:underline font-medium transition duration-200">⬆️ Back to
                 Top</a>
